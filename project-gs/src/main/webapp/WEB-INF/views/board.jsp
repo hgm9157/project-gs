@@ -25,25 +25,7 @@
 
   <!-- Page Content -->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1 class="mt-5">안녕하세요</h1>
-        <p class="lead">스프링 게시판 토이 프로젝트 입니다.</p>
-        <p class="lead">개발환경</p>	
-        <ul class="list-unstyled">        
-          <li>Server OS : Linux CentOS7</li>
-          <li>Language : JAVA 1.6</li>
-          <li>Framework : Spring 3.1.1</li>
-          <li>WEB Server : Apache</li>
-          <li>WAS Server : Tomcat 8.5</li>
-          <li>build tool : maven 2.5.1</li>
-          <li>DB : Oracle 11g</li>
-          <li>ORM : mybatis 3.2.7</li>
-          <li>Bootstrap 4.5.0</li>
-          <li>jQuery 3.5.1</li>
-        </ul>
-      </div>
-    </div>
+		<a>Board</a>
   </div>
 
   <!-- Bootstrap core JavaScript -->
