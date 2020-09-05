@@ -21,7 +21,7 @@
 
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation --> 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
       <a class="navbar-brand" href="/">스프링 게시판</a>
