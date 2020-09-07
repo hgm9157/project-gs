@@ -29,6 +29,8 @@
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">안녕하세요</h1>
         <p class="lead">스프링 게시판 토이 프로젝트 입니다.</p>
+        <p class="lead">허광민 선임님 하이</p>
+        <p class="lead">정송은</p>
         <p class="lead">개발환경</p>	
         <ul class="list-unstyled">        
           <li>Server OS : Linux CentOS7</li>
