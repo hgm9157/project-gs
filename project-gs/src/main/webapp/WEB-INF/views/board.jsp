@@ -72,7 +72,7 @@
 	//글 조회
 	function fn_view(bno){	    
 	    var form = document.getElementById("boardForm");	    
-	    form.action = "/viewContent?bno=" + bno;    
+	    form.action = "/readView?bno=" + bno;    
 	    form.submit(); 
 	}
 	
