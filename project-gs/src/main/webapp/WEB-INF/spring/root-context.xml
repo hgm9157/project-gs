@@ -12,7 +12,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="../db.properties"/>
+        <property name="location" value="/WEB-INF/config/db.properties"/>
         <property name="fileEncoding" value="UTF-8" />
     </bean>
     
