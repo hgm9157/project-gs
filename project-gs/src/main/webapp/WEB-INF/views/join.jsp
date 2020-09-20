@@ -25,7 +25,7 @@
 
   <!-- Page Content -->
   <div class="container">
-		<a>Join</a>
+		<a>정송은씨 로그인 기능 구현 부탁드립니다.</a>
   </div>
 
   <!-- Bootstrap core JavaScript -->

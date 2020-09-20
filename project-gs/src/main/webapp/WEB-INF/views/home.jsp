@@ -33,14 +33,14 @@
         <p class="lead">정송은</p>
         <p class="lead">개발환경</p>	
         <ul class="list-unstyled">        
-          <li>Server OS : Linux CentOS7</li>
+          <li>Server OS : Linux CentOS 7</li>
           <li>Language : JAVA 1.6</li>
           <li>Framework : Spring 3.1.1</li>
           <li>WEB Server : Apache</li>
           <li>WAS Server : Tomcat 8.5</li>
           <li>build tool : maven 2.5.1</li>
-          <li>DB : Oracle 11g</li>
-          <li>ORM : mybatis 3.2.7</li>
+          <li>DB : MariaDB</li>
+          <li>ORM : mybatis 3.4.5</li>
           <li>Bootstrap 4.5.0</li>
           <li>jQuery 3.5.1</li>
         </ul>
