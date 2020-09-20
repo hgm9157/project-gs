@@ -23,18 +23,58 @@
     <link rel="stylesheet" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
 </head>
 
+
 <body>
-	
-  <%@include file ="header.jsp" %>
 
-  <!-- Page Content -->
+	<%@include file ="header.jsp" %>
 <div class="container">
-	여기에 글 보기 만들어 주세요
-</div>
-  <!-- Bootstrap core JavaScript -->
-  <script src="/resources/vendor/jquery/jquery.slim.min.js"></script>
-  <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	
+	    <form id="viewContent" name="viewContent" method="POST">
+	        <div>
+	            <h2>글쓰기</h2>
+	            <div>
+	                <table>
+	                    <tr>
+	                        <th>번호</th>
+	                        <td><input style="width: 500px" type="text" id="bno" name="bno" readonly="readonly" value="${read.bno }"/></td>
+	                    </tr>	                
+	                    <tr>
+	                        <th>제목</th>
+	                        <td><input style="width: 500px" type="text" id="title" name="title" value="${read.title }"/></td>
+	                    </tr>
+	                    <tr>
+	                        <th>내용</th>
+	                        <td><textarea style="width: 500px" rows="10" cols="10" id="content" name="content"><c:out value="${read.content }"/></textarea></td>
+	                    </tr>
+	                    <tr>
+	                        <th>작성자</th>
+	                        <td><input style="width: 500px" type="text" id="writer" name="writer" value="${read.writer }"/></td>
+	                    </tr>
+	                </table>
+	                <div>
+	                    <a href='#' onClick='fn_update()'>수정</a>
+	                    <a href='#' onClick='fn_delete()'>삭제</a>                
+	                </div>
+	            </div>
+	        </div>
+	    </form>
+	<script>
+	//목록
+	function fn_delete(){	   
+	    var form = document.getElementById("viewContent");	    
+	    form.action = "/delete";    
+	    form.submit();					   
+	    alert('삭제되었습니다.');
+	}
+	 
+	//수정
+	function fn_update(){
+	    
+	    var form = document.getElementById("viewContent");	    
+	    form.action = "/update";    
+	    form.submit();
+	    alert('수정되었습니다.');
+	}
+	</script>
+	</div>
 </body>
-
 </html>

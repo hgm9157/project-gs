@@ -26,38 +26,37 @@
 <body>
 	
   <%@include file ="header.jsp" %>
-
-  <!-- Page Content -->
-<div class="container">
-    <form id="boardForm" name="boardForm" method="post">
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>날짜</th>
-                    <th>조회수</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="result" items="${list }" varStatus="status">
-                    <tr>
-                        <td><c:out value="${result.bno}"/></td>
-                        <td><a href='#' onClick='fn_view(${result.bno})'><c:out value="${result.title }"/></a></td>
-                        <td><c:out value="${result.writer }"/></td>
-                        <td><c:out value="${result.regdate }"/></td>
-                        <td></td>
-                    </tr>
-                </c:forEach>
-            </tbody>
-        </table>
-        
-        <div>            
-            <a href='#' onClick='fn_write()' class="btn btn-success">글쓰기</a>            
-        </div>
-    </form>
-</div>
+  
+	<div class="container">
+	    <form id="boardForm" name="boardForm" method="post">
+	        <table class="table table-striped table-hover">
+	            <thead>
+	                <tr>
+	                    <th>번호</th>
+	                    <th>제목</th>
+	                    <th>작성자</th>
+	                    <th>날짜</th>
+	                    <th>조회수</th>
+	                </tr>
+	            </thead>
+	            <tbody>
+	                <c:forEach var="result" items="${list }" varStatus="status">
+	                    <tr>
+	                        <td><c:out value="${result.bno}"/></td>
+	                        <td><a href='#' onClick='fn_view(${result.bno})'><c:out value="${result.title }"/></a></td>
+	                        <td><c:out value="${result.writer }"/></td>
+	                        <td><c:out value="${result.regdate }"/></td>
+	                        <td></td>
+	                    </tr>
+	                </c:forEach>
+	            </tbody>
+	        </table>
+	        
+	        <div>            
+	            <a href='#' onClick='fn_write()' class="btn btn-success">글쓰기</a>            
+	        </div>
+	    </form>
+	</div>
 <script>
 	//글 쓰기
 	function fn_write(){

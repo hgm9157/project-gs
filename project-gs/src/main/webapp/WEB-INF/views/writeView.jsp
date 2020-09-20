@@ -9,11 +9,7 @@
 <html lang="en">
 
 <head>
-
-  <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <title>PROJECT GS</title>
 
@@ -29,9 +25,43 @@
 
   <!-- Page Content -->
 <div class="container">
-	여기에 글 작성 만들어 주세요
+	<form id="writeView" name="writeView" method="post">
+		<div>
+			<h2>글쓰기</h2>
+				<div>
+					<table>
+	                    <tr>
+	                        <th>제목</th>
+	                        <td><input style="width: 500px" type="text" id="title" name="title" /></td>
+	                    </tr>
+	                    <tr>
+	                        <th>내용</th>
+	                        <td><textarea style="width: 500px" rows="10" cols="10" id="content" name="content"></textarea></td>
+	                    </tr>	                    
+	                    <tr>
+	                        <th>작성자</th>
+	                        <td><input style="width: 500px" type="text" id="writer" name="writer" /></td>
+	                    </tr>	                    
+					</table>
+	                <div>
+	                    <a href='#' onClick='fn_addtoBoard()'>글 등록</a>
+	                </div>					
+				</div>			
+		</div>
+	</form>
 </div>
 
+  <script>  
+  	//글 등록
+  	function fn_addtoBoard() {
+	    var form = document.getElementById("writeView");	    
+	    form.action = "/write";    
+	    form.submit();   			
+	    alert('등록되었습니다.');
+  	}
+  	
+  </script>
+  
   <!-- Bootstrap core JavaScript -->
   <script src="/resources/vendor/jquery/jquery.slim.min.js"></script>
   <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

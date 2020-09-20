@@ -59,14 +59,14 @@ public class BoardController {
 	}
 	
 	//글 조회
-	@RequestMapping(value = "/readView", method = RequestMethod.GET)
+	@RequestMapping(value = "/readView", method = RequestMethod.POST)
 	public String read(BoardVO boardVO, Model model) throws Exception{
 		logger.info("read");
 		
 		model.addAttribute("read",service.read(boardVO.getBno()));
 		
 		
-		return "readView";
+		return "viewContent";
 		
 	}
 	
