@@ -35,5 +35,6 @@ public class JoinController {
 		
 		return "/join";
 	}
+
 	
 }
