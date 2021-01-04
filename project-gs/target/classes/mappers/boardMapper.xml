@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardMapper">
+
+	<!-- 게시판 글 작성 -->
+	<insert id="insert">
+		/*BNO(PK)의 경우 AUTE_INCREMENT*/
+		INSERT INTO GS_BOARD(TITLE, CONTENT, WRITER )
+		VALUES(#{title}, #{content}, #{writer})
+
+	</insert>
+
+	<select id="list" resultType="kr.co.vo.BoardVO">
+		SELECT BNO, TITLE, WRITER, REGDATE
+		  FROM GS_BOARD
+	 	 ORDER BY BNO ASC
+	</select>
+
+	<select id="read" parameterType="int"
+		resultType="kr.co.vo.BoardVO">
+		SELECT BNO, TITLE, CONTENT,
+		       WRITER, REGDATE
+		  FROM GS_BOARD
+		 WHERE BNO = #{bno}
+	</select>
+
+	<!-- 게시판 글 작성 -->
+	<update id="update" parameterType="kr.co.vo.BoardVO">
+		UPDATE GS_BOARD
+		   SET TITLE = #{title},
+		       CONTENT = #{content}
+		 WHERE BNO = #{bno}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE
+		FROM GS_BOARD
+		WHERE BNO = #{bno}
+	</delete>
+
+</mapper>
