@@ -19,6 +19,22 @@
     <link rel="stylesheet" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/vendor/bootstrap/css/signUp.css">
 </head>
+<script type = "text/javascript">
+	$document.ready(function(){
+		//회원가입 버튼 눌렀을 때
+		$(".login-button").on("click",function(){
+			//아이디체크
+			var idVal = $("#USERID").val();
+			var passVal = $("#PASSWORD").val();
+			var passConVal = $("#PASSWORD_CON").val();
+			
+			if(idVal == "" || idVal == null){
+				alert("ID 값 확인해주세여");
+			}
+			//비밀번호체크
+		});	
+	});
+</script>
 <body>
 	
   <%@include file ="header.jsp" %>
@@ -33,37 +49,37 @@
 		<div class="logo"><spring:message code="member.register"/></div>
 		<!-- Main Form -->
 		<div class="login-form-1">
-			<form id="register-form" class="text-left">
+			<form id="register-form" class="text-left" action="/join" method="post">
 				<div class="login-form-main-message"></div>
 				<div class="main-login-form">
 					<div class="login-group">
 						<div class="form-group">
 							<label for="reg_username" class="sr-only"><spring:message code="member.id"/></label>
-							<input type="text" class="form-control" id="reg_id" name="reg_id" placeholder=<spring:message code="member.id"/>>
+							<input type="text" class="form-control" id="USERID" name="USERID" placeholder=<spring:message code="member.id"/>>
 						</div>
 						<div class="form-group">
 							<label for="reg_password" class="sr-only"><spring:message code="member.password"/></label>
-							<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder=<spring:message code="member.password"/>>
+							<input type="password" class="form-control" id="PASSWORD" name="PASSWORD" placeholder=<spring:message code="member.password"/>>
 						</div>
 						<div class="form-group">
 							<label for="reg_password_confirm" class="sr-only"><spring:message code="member.password.comfirm"/></label>
-							<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder=<spring:message code="member.password.comfirm"/>>
+							<input type="password" class="form-control" id="PASSWORD_CON" name="PASSWORD_CON" placeholder=<spring:message code="member.password.comfirm"/>>
 						</div>
 						
 						<div class="form-group">
 							<label for="reg_email" class="sr-only"><spring:message code="member.email"/></label>
-							<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder=<spring:message code="member.email"/>>
+							<input type="text" class="form-control" id="EMAIL" name="EMAIL" placeholder=<spring:message code="member.email"/>>
 						</div>
 						<div class="form-group">
 							<label for="reg_fullname" class="sr-only"><spring:message code="member.name"/></label>
-							<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder=<spring:message code="member.name"/>>
+							<input type="text" class="form-control" id="USERNAME" name="USERNAME" placeholder=<spring:message code="member.name"/>>
 						</div>
 						
 						<div class="form-group login-group-checkbox">
-							<input type="radio" class="" name="reg_gender" id="male" placeholder=<spring:message code="member.male"/>>
+							<input type="radio" class="" name="GENDER" id="male" placeholder=<spring:message code="member.male"/>>
 							<label for="male"><spring:message code="member.male"/></label>
 							
-							<input type="radio" class="" name="reg_gender" id="female" placeholder=<spring:message code="member.female"/>>
+							<input type="radio" class="" name="GENDER" id="female" placeholder=<spring:message code="member.female"/>>
 							<label for="female"><spring:message code="member.female"/></label>
 						</div>
 						

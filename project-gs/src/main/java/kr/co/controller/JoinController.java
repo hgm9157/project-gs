@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -11,11 +13,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import kr.co.dao.MemberDAO;
+import kr.co.dao.MemberDAOImpl;
+import kr.co.service.MemberService;
+import kr.co.vo.MemberVO;
+
 /**
  * Handles requests for the application home page.
  */
 @Controller 
 public class JoinController {
+	
+	@Inject
+	MemberService service;
 	
 	private static final Logger logger = LoggerFactory.getLogger(JoinController.class);
 	
@@ -35,6 +45,16 @@ public class JoinController {
 		
 		return "/join";
 	}
-
+	
+	//가입하긔
+	@RequestMapping(value = "/join", method = RequestMethod.POST)
+	public String postJoin(MemberVO vo) throws Exception{
+		logger.info("member join!");
+		
+		service.insertMember(vo);
+		
+		return null;
+		
+	}
 	
 }
