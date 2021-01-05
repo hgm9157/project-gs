@@ -16,13 +16,13 @@ public class MemberDAOImpl implements MemberDAO{
 	private SqlSession sqlSession;
 	
 	@Override
-	public List<MemberVO> list() throws Exception{
+	public List<MemberVO> memberList() throws Exception{
 		return sqlSession.selectList("memberMapper.list");
 	}
 
 	@Override
 	public void insertMember(MemberVO memberVO) throws Exception{
-		sqlSession.insert("memberMapper.insert", memberVO);
+		sqlSession.insert("memberMapper.register", memberVO);
 		
 	}
 

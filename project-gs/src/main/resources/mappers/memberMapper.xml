@@ -3,23 +3,23 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="memberMapper">
-	<insert id = "insert">
+	<insert id = "register">
 		INSERT INTO GS_USERINFO('USERID'
 							   ,'USERNAME'
-							   M,'PASSWORD'
+							   ,'PASSWORD'
 							   ,'EMAIL'
 							   ,'GENDER'
 							   ,'ROLE'
 							   ,'CREATETIME'
 							   ,'CREATOR')
-						VALUES( #{USERID}
-							   ,#{USERNAME}
-							   ,#{PASSWORD}
-							   ,#{EMAIL}
-							   ,#{GENDER}
+						VALUES( #{userId}
+							   ,#{userName}
+							   ,#{password}
+							   ,#{email}
+							   ,#{gender}
 							   ,'ADMIN'
 							   ,SYSDATE()
-							   ,#{USERID})
+							   ,#{userId})
 					
 	</insert>
 	

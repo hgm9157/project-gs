@@ -25,7 +25,7 @@ import kr.co.vo.MemberVO;
 public class JoinController {
 	
 	@Inject
-	MemberService service;
+	MemberService memService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(JoinController.class);
 	
@@ -51,7 +51,7 @@ public class JoinController {
 	public String postJoin(MemberVO vo) throws Exception{
 		logger.info("member join!");
 		
-		service.insertMember(vo);
+		memService.insertMember(vo);
 		
 		return null;
 		

@@ -7,7 +7,7 @@ import kr.co.vo.MemberVO;
 public interface MemberService {
 
 	//회원조회
-	public List<MemberVO> list() throws Exception;
+	public List<MemberVO> memberList() throws Exception;
 	
 	//회원 저장
 	public void insertMember(MemberVO memberVO) throws Exception;

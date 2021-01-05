@@ -4,17 +4,20 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.springframework.stereotype.Service;
+
 import kr.co.dao.MemberDAO;
 import kr.co.vo.MemberVO;
 
+@Service
 public class MemberServiceImpl implements MemberService{
 
 	@Inject
 	private MemberDAO dao;
 	
 	@Override
-	public List<MemberVO> list() throws Exception {
-		return dao.list();
+	public List<MemberVO> memberList() throws Exception {
+		return dao.memberList();
 	}
 
 	@Override
