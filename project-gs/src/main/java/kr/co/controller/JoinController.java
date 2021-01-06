@@ -13,8 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import kr.co.dao.MemberDAO;
-import kr.co.dao.MemberDAOImpl;
 import kr.co.service.MemberService;
 import kr.co.vo.MemberVO;
 
@@ -48,13 +46,21 @@ public class JoinController {
 	
 	//가입하긔
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
-	public String postJoin(MemberVO vo) throws Exception{
+	public String postJoin(MemberVO vo, Model model) throws Exception{
 		logger.info("member join!");
+		try {
+			
+			memService.insertMember(vo);
 		
-		memService.insertMember(vo);
-		
-		return null;
-		
+			model.addAttribute("msg", "회원가입에 성공하였습니다");
+			model.addAttribute("url","/");
+		}catch(Exception e) {
+			model.addAttribute("msg", "회원가입에 실패하였습니다");
+			model.addAttribute("url","/");
+		}
+	
+		return "/redirectJoin";
 	}
+	
 	
 }

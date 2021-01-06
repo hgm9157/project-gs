@@ -26,7 +26,6 @@ public class memberController {
 		model.addAttribute("serverTime", formattedDate);
 		
 		return "/login";
-		
 	}
 	
 }

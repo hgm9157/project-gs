@@ -4,14 +4,14 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="memberMapper">
 	<insert id = "register">
-		INSERT INTO GS_USERINFO('USERID'
-							   ,'USERNAME'
-							   ,'PASSWORD'
-							   ,'EMAIL'
-							   ,'GENDER'
-							   ,'ROLE'
-							   ,'CREATETIME'
-							   ,'CREATOR')
+		INSERT INTO GS_USERINFO(USERID
+							   ,USERNAME
+							   ,PASSWORD
+							   ,EMAIL
+							   ,GENDER
+							   ,ROLE
+							   ,CREATEDATE
+							   ,CREATOR)
 						VALUES( #{userId}
 							   ,#{userName}
 							   ,#{password}

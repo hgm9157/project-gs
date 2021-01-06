@@ -27,14 +27,14 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script type = "text/javascript">
 	$(document).ready(function(){
-		alert('aaaaaa');
-	
+
 		//회원가입 버튼 눌렀을 때
 		$(".login-button").on("click",function(){
 			var idVal = $("#userId").val();
 			var passVal = $("#password").val();
 			var passConVal = $("#password_con").val();
-			var agreeChk = $("#chk").checked;
+			//checkbox check 확인하는 것
+			var agreeChk = $("input:checkbox[id='termChk']").prop("checked");
 			
 			//아이디체크
 			if(idVal == "" || idVal == null){
@@ -104,15 +104,15 @@
 						</div>
 						
 						<div class="form-group login-group-checkbox">
-							<input type="radio" class="" name="gender" id="male" placeholder=<spring:message code="member.male"/>>
+							<input type="radio" class="" name="gender" id="male" placeholder=<spring:message code="member.male"/> value="male">
 							<label for="male"><spring:message code="member.male"/></label>
 							
-							<input type="radio" class="" name="gender" id="female" placeholder=<spring:message code="member.female"/>>
+							<input type="radio" class="" name="gender" id="female" placeholder=<spring:message code="member.female"/> value="female">
 							<label for="female"><spring:message code="member.female"/></label>
 						</div>
 						
 						<div class="form-group login-group-checkbox">
-							<input type="checkbox" class="" id="termChk" name="termChk" value="chk">
+							<input type="checkbox" class="formCheckbox" id="termChk" name="termChk">
 							<!-- <label for="reg_agree">i agree with <a href="#">terms</a></label> -->
 							<label for="termChk"><spring:message code='term.agree'/></label>
 						</div>
