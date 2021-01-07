@@ -61,6 +61,20 @@
 			}
 			
 		});	
+		
+		//로그인 선택했을 때 팝업창 띄우도록...
+		$(".etc-login-form").on("click", function(){
+			openLoginPopup();
+		});
+		
+		//여기서 url, 상세내용 넣어주기
+		function openLoginPopup(){
+			var url = "/login";
+			var width = 700;
+			var heigth = 500;
+		   	var popupOption= "width="+winWidth+", height="+winHeight;    //팝업창 옵션(optoin)
+		    window.open(url,"Login",popupOption);
+		}
 	});
 </script>
 <body>
@@ -120,7 +134,7 @@
 					<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i><spring:message code="register.agreeBtn" /></button>
 				</div>
 				<div class="etc-login-form">
-					<p><spring:message code="register.agree" /> <a href="/login"><spring:message code="member.login"/></a></p>
+					<p><spring:message code="register.agree" /><a href=""><spring:message code="member.login"/></a></p>
 				</div>
 			</form>
 		</div>
