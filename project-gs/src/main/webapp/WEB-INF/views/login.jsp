@@ -14,7 +14,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-	<title>GS Login</title>
+  <title>GS Login</title>
+  
+  <link rel="stylesheet" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/resources/vendor/bootstrap/css/login.css">
+
 </head>
 <body>
 	<div class="container">
