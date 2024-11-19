@@ -8,7 +8,7 @@
 	<insert id="insert">
 		/*BNO(PK)의 경우 AUTE_INCREMENT*/
 		INSERT INTO GS_BOARD(TITLE, CONTENT, WRITER )
-		VALUES(#{title}, #{content}, #{writer})
+		VALUES(#{title}, #{content}, #{writer}) 
 
 	</insert>
 
